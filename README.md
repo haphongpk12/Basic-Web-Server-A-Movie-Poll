@@ -53,7 +53,7 @@ Data:
   - Data will be saved with SqlLite (default data engine of Django) and using the Build in ORM and admin page of Django.
   - Data model:
 
-  ![](resource/poll_app_data_model.jpg =600x)
+  ![](resource/poll_app_data_model.jpg) { width = 600px}
 
 ## Step by step guide of part 2:
 Because this is the first web project, a step by step guild will be provided to you. Hint:
