@@ -53,7 +53,7 @@ Data:
   - Data will be saved with SqlLite (default data engine of Django) and using the Build in ORM and admin page of Django.
   - Data model:
 
-  ![](resource/poll_app_data_model.jpg | width=600)
+  ![](resource/poll_app_data_model.jpg)
 
 ## Step by step guide of part 2:
 Because this is the first web project, a step by step guild will be provided to you. Hint:
@@ -84,3 +84,11 @@ Step 5: Writing and processing form:
 Step 6: Customize look and feels:
 
 - Learn how to serve static file in Django, add simple background image and css file to the project.
+
+
+## Bonus
+
+### Make the Poll more beauty with HTML & CSS
+Just make our Movie Poll more beauty. Try leaning some basic HTML & CSS by your self and applied it to your Poll.
+
+![](Webp.net-gifmaker__1_.json)
