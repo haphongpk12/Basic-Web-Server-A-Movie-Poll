@@ -91,4 +91,4 @@ Step 6: Customize look and feels:
 ### Make the Poll more beauty with HTML & CSS
 Just make our Movie Poll more beauty. Try leaning some basic HTML & CSS by your self and applied it to your Poll.
 
-![](Webp.net-gifmaker__1_.json)
+![](Webp.net-gifmaker__1_.gif)
