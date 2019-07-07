@@ -1,0 +1,51 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: white url("images/background.gif") no-repeat fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fa-home {
+    color: yellow;
+}
+
+.container {
+  width: 50%;
+  margin-top: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 5px gray;
+  border-radius: 30px;
+}
+
+.title {
+  margin-bottom: 0;
+  color: firebrick;
+}
+
+ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul > li {
+    border: solid 2px white;
+    border-radius: 30px;
+    margin: 20px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.vote_again {
+    margin-top: 0!important;
+    color: dodgerblue;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 12px;
+}

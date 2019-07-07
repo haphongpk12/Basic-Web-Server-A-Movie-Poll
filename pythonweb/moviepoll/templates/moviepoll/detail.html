@@ -1,12 +1,32 @@
-<h1>{{ question.question_text }}</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'moviepoll/detail.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{% block title %}Intek Movie Friday Poll app{% endblock %}</title>
+</head>
 
-<form action="{% url 'moviepoll:vote' question.id %}" method="post">
-{% csrf_token %}
-{% for choice in question.choice_set.all %}
-    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-{% endfor %}
-<input type="submit" value="Vote">
-</form>
+<body>
+    <a href="{% url 'moviepoll:index' %}"><i class="fa fa-home fa-5x"></i></a>
+    <div class="container">
+        <h1 class="title">{{ question.question_text }}</h1>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        <form action="{% url 'moviepoll:vote' question.id %}" method="post" class="answer_form">
+            <div class="answer_choice">
+                <div class="answer">
+                    {% csrf_token %}
+                    {% for choice in question.choice_set.all %}
+                    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+                    {% endfor %}
+                </div>
+            </div>
+            <input type="submit" value="Vote" class="vote">
+        </form>
+    </div>
+</body>
+
+</html>
