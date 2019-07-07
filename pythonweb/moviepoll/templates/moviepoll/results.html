@@ -14,9 +14,13 @@
     <div class="container">
         <h1 class="title">{{ question.question_text }}</h1>
         <ul>
+            {% with count_choice=0 %}
             {% for choice in question.choice_set.all %}
             <li>{{ choice.choice_text }}  ({{ choice.votes }} vote{{ choice.votes|pluralize }})</li>
+            {{ count_choice|add:choice.votes}}
             {% endfor %}
+            <h1>{{ count_choice }}</h1>
+            {% endwith %}
         </ul>
         <a href="{% url 'moviepoll:detail' question.id %}" class="vote_again">Vote again?</a>
     </div>
