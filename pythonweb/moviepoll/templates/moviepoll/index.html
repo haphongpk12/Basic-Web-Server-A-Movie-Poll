@@ -1,13 +1,20 @@
-{% load static %}
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="{% static 'moviepoll/style.css' %}">
+		<title>{% block title %}Intek Movie Friday Poll app{% endblock %}</title>
+	</head>
+	<body>
 
-<link rel="stylesheet" type="text/css" href="{% static 'moviepoll/style.css' %}">
-
-{% if latest_question_list %}
-	<ul>
-	{% for question in latest_question_list %}
-		<li><a href="{% url 'moviepoll:detail' question.id %}">{{ question.question_text }}</a></li>
-	{% endfor %}
-	</ul>
-{% else %}
-	<p>No polls are available.</p>
-{% endif %}
+		{% if latest_question_list %}
+			<ul>
+			{% for question in latest_question_list %}
+				<li><a href="{% url 'moviepoll:detail' question.id %}">{{ question.question_text }}</a></li>
+			{% endfor %}
+			</ul>
+		{% else %}
+			<p>No polls are available.</p>
+		{% endif %}
+	</body>
+</html>
